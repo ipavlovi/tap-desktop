@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TheAirline.GUIModel.PagesModel.GamePageModel
+﻿namespace TheAirline.GUIModel.PagesModel.GamePageModel
 {
+    using System.Linq;
     using System.Reflection;
 
     public class GameVersionMVVM
@@ -14,14 +9,16 @@ namespace TheAirline.GUIModel.PagesModel.GamePageModel
         {
             get
             {
-                var assemblyInformationalVersion =
-               Assembly.GetExecutingAssembly()
-                   .CustomAttributes.FirstOrDefault(
-                       att => att.AttributeType == typeof(AssemblyInformationalVersionAttribute));
+                CustomAttributeData assemblyInformationalVersion =
+                    Assembly.GetExecutingAssembly()
+                        .CustomAttributes.FirstOrDefault(
+                            att => att.AttributeType == typeof(AssemblyInformationalVersionAttribute));
 
                 if (assemblyInformationalVersion != null)
                 {
-                    return string.Format("Game Version: {0}", assemblyInformationalVersion.ConstructorArguments[0].ToString().Trim('"'));
+                    return string.Format(
+                        "Game Version: {0}",
+                        assemblyInformationalVersion.ConstructorArguments[0].ToString().Trim('"'));
                 }
 
                 return "unknown version";

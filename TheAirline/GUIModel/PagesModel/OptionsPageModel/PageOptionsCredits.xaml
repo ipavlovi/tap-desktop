@@ -16,6 +16,9 @@
             <TextBlock Text="Mike" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="20"
                        HorizontalAlignment="Center" />
             <TextBlock Text="Webmaster" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+            <TextBlock Text="Ivan" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="20"
+                           HorizontalAlignment="Center" />
+            <TextBlock Text="Programmer" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
             <TextBlock Text="Rayhan" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="20"
                        HorizontalAlignment="Center" />
             <TextBlock Text="DLC Contributer" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
