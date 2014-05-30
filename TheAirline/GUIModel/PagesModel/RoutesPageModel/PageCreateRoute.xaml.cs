@@ -404,10 +404,13 @@
             if (cb != null)
             {
                 var view = (ListCollectionView)CollectionViewSource.GetDefaultView(cb.ItemsSource);
-                view.GroupDescriptions.Clear();
+                if (view != null)
+                {
+                    view.GroupDescriptions.Clear();
 
-                var groupDescription = new PropertyGroupDescription("Profile.Town.Country");
-                view.GroupDescriptions.Add(groupDescription);
+                    var groupDescription = new PropertyGroupDescription("Profile.Town.Country");
+                    view.GroupDescriptions.Add(groupDescription);
+                }
             }
         }
 
